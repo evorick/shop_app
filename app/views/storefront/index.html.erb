@@ -6,7 +6,7 @@
   <div class="col-sm-4">
     <div class="panel panel-default">
       <div class="panel-body">
-        <%= image_tag product.image.url(:medium, class: "img-responsive") %>
+        <%= image_tag product.image.url(:thumb, class: "img-responsive") %>
         <p>
           <a href="#" data-toggle="modal" data-target="#productModal_<%= product.id %>">
             <span class="glyphicon glyphicon-plus"></span> quick info
@@ -32,7 +32,9 @@
         <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
       </div>
       <div class="modal-body">
-        ...
+        <%= image_tag product.image.url(:medium, class: "img-responsive") %>
+        <p><%= number_to_currency product.price %></p>
+        <p><%= product.description %></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
