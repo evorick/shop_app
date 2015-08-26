@@ -5,13 +5,13 @@ one:
   price: 9.99
   quantity: 1
   description: MyText
-  brand_id: 
-  category_id: 
+  brand_id: 1
+  category_id: 1
 
 two:
-  name: MyString
+  name: MyString2
   price: 9.99
   quantity: 1
-  description: MyText
-  brand_id: 
-  category_id: 
+  description: MyText2
+  brand_id: 1
+  category_id: 1
