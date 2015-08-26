@@ -29,11 +29,11 @@
   </div>
   <div class="field">
     <%= f.label :brand_id %><br>
-    <%= f.collection_select :brand_id %>
+    <%= f.collection_select :brand_id, Brand.order(:name).all, :id, :name, {prompt: "Select a brand"}, {class: "form-control"} %>
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.collection_select :category_id %>
+    <%= f.collection_select :category_id, Category.order(:name).all, :id, :name, {prompt: "Select a category"}, {class: "form-control"} %>
   </div>
   <div class="field">
     <%= f.label :image %><br>

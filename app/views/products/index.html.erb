@@ -18,12 +18,13 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
+        <td><%= image_tag product.image.url(:thumb), class: "img-responsive" %></td>
         <td><%= product.name %></td>
-        <td><%= product.price %></td>
+        <td><%= number_to_currency product.price %></td>
         <td><%= product.quantity %></td>
         <td><%= product.description %></td>
-        <td><%= product.brand %></td>
-        <td><%= product.category %></td>
+        <td><%= product.brand.name %></td>
+        <td><%= product.category.name %></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
