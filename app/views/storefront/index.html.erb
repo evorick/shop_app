@@ -1,2 +1,48 @@
-<h1>Storefront#index</h1>
-<p>Find me in app/views/storefront/index.html.erb</p>
+<h1>Up Indie</h1>
+<p>Independent Media Marketplace</p>
+
+<div class="row">
+  <% @products.each do |product| %>
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= image_tag product.image.url(:medium, class: "img-responsive") %>
+        <p>
+          <a href="#" data-toggle="modal" data-target="#productModal_<%= product.id %>">
+            <span class="glyphicon glyphicon-plus"></span> quick info
+          </a>
+        </p>
+        <p>
+          <strong><%= number_to_currency product.price %></strong>
+        </p>
+        <h4>
+          <%= product.name %>
+        </h4>
+        <p>Made by: <%= product.brand.try(:name) %></p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="productModal_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <% end %>
+</div>
+
+
