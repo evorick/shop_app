@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'storefront/index'
+
   resources :products
   resources :brands
   resources :categories
