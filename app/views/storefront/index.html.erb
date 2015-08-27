@@ -26,6 +26,7 @@
           <%= product.name %>
         </h4>
         <p>Made by: <%= product.brand.try(:name) %></p>
+        <%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-success btn-sm" %>
       </div>
     </div>
   </div>
