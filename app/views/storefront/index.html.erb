@@ -1,6 +1,12 @@
 <h1>Up Indie</h1>
 <p>Independent Producer Marketplace</p>
 
+<% if params[:cat_id] %>
+  <h3>All <%= @category.name.titleize %></h3>
+<% else %>
+  <h3>All Products</h3>
+<% end %>
+
 <div class="row">
   <% @products.each do |product| %>
   <div class="col-sm-4">
