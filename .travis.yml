@@ -4,7 +4,7 @@ branches:
     - 'test'
 
 language: ruby
-  rvm:
+rvm:
     -2.2.0
 
 script:
