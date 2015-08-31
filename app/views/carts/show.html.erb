@@ -26,4 +26,6 @@
 
 <%= link_to "Continue Shopping", storefront_index_path, class: "btn btn-success btn-sm" %>
 
+<%= link_to "Checkout", new_order_path, class: "btn btn-info btn-sm" %>
+
 <%= button_to "Empty Cart", @cart, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'} %>

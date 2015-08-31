@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  include CurrentCart   #this grabs to module
+  before_action :set_cart, only: [:new, :create]
+  before_action :authenticate_user!
 
   # GET /orders
   # GET /orders.json
@@ -14,7 +16,13 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    if @cart.line_items.empty?
+      redirect_to storefront_index_url, notice: "Your cart is empty."
+      return
+    end
+
     @order = Order.new
+    @order.user_id = current_user.id
   end
 
   # GET /orders/1/edit
