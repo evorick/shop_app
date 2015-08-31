@@ -16,6 +16,7 @@
         <td><%= item.quantity %> &times;</td>
         <td><%= number_to_currency item.price %></td>
         <td><%= number_to_currency item.total_price %></td>
+        <td><%= button_to "Delete", item, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>

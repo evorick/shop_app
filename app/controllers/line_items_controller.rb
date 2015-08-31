@@ -64,7 +64,8 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
+      #TODO I almost got the below code correct I just need it to go back to the cart where the delete action was triggered. 
+      format.html { redirect_to :back, notice: 'Line item was successfully destroyed.' } # carts_url.last
       format.json { head :no_content }
     end
   end
