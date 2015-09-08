@@ -16,17 +16,14 @@
     <%= f.text_field :name, class: "form-control", placeholder: "Jane-Smith" %>
   </div>
   <div class="field form-group">
-    <%= f.label :address, class: "form-control", placeholder: "100 St. Charles Ave\nNew Orleans, LA 70115" %><br>
-    <%= f.text_area :address %>
+    <%= f.label :address, placeholder: "100 St. Charles Ave\nNew Orleans, LA 70115" %><br>
+    <%= f.text_area :address, class: "form-control" %>
   </div>
   <div class="field form-group">
     <%= f.label :payment_type %><br>
     <%= f.select :payment_type, Order::PAYMENT_TYPES, {prompt: "Select a payment method"}, {class: "form-control"} %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
+ 
   <div class="actions">
     <%= f.submit "Place Order", class: "btn btn-success" %>
   </div>

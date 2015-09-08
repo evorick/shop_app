@@ -22,11 +22,9 @@ test:
 
 production:
  <<: *default
- database: db/production.sqlite3
+ adapter: postgresql
 
-# ri_bennett [10:36 AM]10:36
-# SQLite version 3.x
-#   gem install sqlite3
+
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
@@ -49,4 +47,4 @@ test:
 
 production:
  <<: *default
- database: db/production.sqlite3`
+ adapter: postgresql
