@@ -1,10 +1,16 @@
-<a id="home_logo" href="http://upindie.herokuapp.com">
-  <div class="logo-text">
-    <h1>Up Indie</h1>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <a class href="#">
+        <div id="home_logo">
+          <img src="<%= asset_path('upindie_flatlogo.png')%>">
+        </div>
+      </a>
+      <p style="text-indent: 2.25em;">Independent Producer Marketplace</p>
+    </div>
   </div>
-</a>
-
-<p>Independent Producer Marketplace</p>
+</div>
 
 <% if params[:cat_id] %>
   <h3>All <%= @category.name.titleize %></h3>
