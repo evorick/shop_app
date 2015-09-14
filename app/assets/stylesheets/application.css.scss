@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+// CSS from the bootstrap template.
+
+// body {
+//     // padding-top: 70px; //Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes.
+// }
+
+.jumbotron {
+  background-image: image-url("accordian.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -35px;
+  padding-top: 125px;
+  height: 500px;
+  color: #fff;
+}
+
+.hero-spacer {
+    //margin-top: 50px;
+    margin-left: -140px;
+    margin-right: -140px;
+}
+
+// .hero-feature {
+//     margin-bottom: 30px;
+// }
+
+// footer {
+//     margin: 50px 0;
+// }
