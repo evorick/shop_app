@@ -16,6 +16,9 @@ config.paperclip_defaults = {
   #Configuration for paperclip:
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
+  # Don't care if the mailer can't send.
+ config.action_mailer.raise_delivery_errors = false
+
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -29,6 +32,19 @@ config.paperclip_defaults = {
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
+ #  config.action_mailer.smtp_settings = {
+ #   address: "smtp.gmail.com",
+ #   port: 587,
+ #   domain: Rails.application.secrets.domain_name,
+ #   authentication: "plain",
+ #   enable_starttls_auto: true,
+ #   user_name: Rails.application.secrets.email_provider_username,
+ #   password: Rails.application.secrets.email_provider_password
+ # }
+
+ #  config.action_mailer.default_url_options = {:host => Rails.application.secrets.domain_name}
+ #  config.action_mailer.delivery_method = :smtp
+ #  config.action_mailer.perform_deliveries = true
 
   config.action_mailer.delivery_method = :letter_opener
   
